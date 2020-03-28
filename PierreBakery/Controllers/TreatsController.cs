@@ -6,11 +6,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace PierreBakery.Controllers
 {
-  public class CategoriesController : Controller
+  public class TreatsController : Controller
   {
     private readonly PierreBakeryContext _db;
 
-    public CategoriesController(PierreBakeryContext db)
+    public TreatsController(PierreBakeryContext db)
     {
       _db = db;
     }
