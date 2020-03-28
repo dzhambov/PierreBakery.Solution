@@ -1,9 +1,8 @@
-using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 
 namespace PierreBakery.Models
 {
-	public class Treat
+  public class Treat
 	{
 		public Treat()
 		{

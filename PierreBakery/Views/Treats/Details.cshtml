@@ -1,0 +1,28 @@
+@{
+  Layout = "_Layout";
+}
+
+@model PierreBakery.Models.Treat;
+
+<h2>Treaet Details</h2>
+<hr />
+<h3>@Html.DisplayNameFor(model => model.TreatName): @Html.DisplayFor(model => model.TreatName)</h3>
+
+@if(@Model.Flavors.Count == 0)
+{
+  <p>This category does not contain any flavors</p>
+}
+else
+{
+  <h4>Flavors the category contains:</h4>
+  <ul>
+  @foreach(var join in Model.Flavors)
+  {
+    <li>@join.Flavor.FlavorKind</li>
+  }
+  </ul>
+}
+
+<p>@Html.ActionLink("Back to treats", "Index")</p>
+<p>@Html.ActionLink("Edit treats", "Edit", new { id = Model.TreatId })</p>
+<p>@Html.ActionLink("Delete Treat", "Delete", new { id = Model.TreatId })</p>
